@@ -70,7 +70,7 @@ nav ul li a:hover:hover::after{
     padding: 14px 50px;
     border-radius: 6px;
     text-decoration: none;
-    transition: background-color 0.2s;
+    transition: background-color 0.3s;
 }
 .header-text p{
     font-size: 30px;
