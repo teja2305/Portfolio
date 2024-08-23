@@ -1,0 +1,199 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Portfolio</title>
+    <link rel="stylesheet" href="style.css">
+    <script src="https://kit.fontawesome.com/981d186320.js" crossorigin="anonymous"></script>
+</head>
+<body>
+<div id="header">
+    <div class="container">
+        <nav>
+            <img src="images/logo3.png" alt="Logo" class="logo">
+            <ul id="sidemenu">
+                <li><a href="#header">Home</a></li>
+                <li><a href="#about">About</a></li>
+                <li><a href="#services">Services</a></li>
+                <li><a href="#projects">Projects</a></li>
+                <li><a href="#contact">Contact</a></li>
+                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
+            </ul>
+            
+            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
+        </nav>
+        <div class="header-text">
+            <a href="https://drive.google.com/file/d/1OVyG3lGVbwboW67CT7BvHLIUFkQDi3IK/view?usp=sharing" download class="btn btn2" download target="_blank">View Resume</a>
+            <p>Software Developer</p>
+            <h1>Hi, I'm <span>Sai Teja</span><br>From India</h1>
+            
+        </div>
+    </div>
+</div>
+<!-- About Section -->
+<div id="about">
+    <div class="container">
+        <div class="row">
+            <div class="about-col-1">
+                <img src="images/user1.png" alt="Profile Picture">
+            </div>
+            <div class="about-col-2">
+                <h1 class="sub-title">About Me</h1>
+                <p>Hi there! I'm Sai Teja, a Computer Science and Engineering student at SCSVMV University, Kanchipuram. I love exploring how technology can make life better. When I tackle a project, I dive in headfirst, always looking for ways to make things work better and easier. I'm all about teamwork and learning from others. Let's team up and create something awesome together!</p>
+                <div class="tab-titles">
+                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
+                     <p class="tab-links" onclick="opentab('education')">Education</p>
+                 </div>
+                 <div class="tab-contents active-tab" id="skills">
+                    <ul>
+                        <li><span>Programming </span>(Java, Python)</li>
+                        <li><span>Data Science </span>(Pandas, Seaborn, Numpy)</li>
+                        <li><span>Database </span>(SQLite)</li>
+                        <li><span>Frontend </span>(HTML,CSS,Javascript)</li>
+                        <li><span>Machine Learning </span>(Numpy, TensorFlow, Scikit-Learn, PyTorch)</li>
+                        <li><span>Open CV </span>(Matplotlib, Turtle, Pytesseract)</li>
+                        <li><span>Soft Skills </span>(Time Management, Communication, Adaptability, Problem Solving)</li>
+                    </ul>
+                 </div>
+                 <div class="tab-contents" id="education">
+                    <ul>
+                        <li><span>2020 - 2024</span><br>BE-CSE from SCSVMV University, Kanchipuram, Tamil Nadu</li>
+                        <li><span>2018 - 2020</span><br>Intermediate from St.Patricks Junior College</li>
+                    </ul>
+                 </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Services Section -->
+<div id="services">
+    <div class="container">
+        <h1 class="sub-title">My Services</h1>
+        <div class="services-list">
+            <div>
+                <i class="fas fa-code"></i>
+                <h2>Web Development</h2>
+                <p>Crafting dynamic and responsive web solutions, specializing in frontend and backend development.</p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <i class="fas fa-chart-pie"></i>
+                <h2>Data Science</h2>
+                <p>Offering data analysis, visualization, and machine learning model services using modern tools.</p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+            <div>
+                <i class="fas fa-robot"></i>
+                <h2>Chatbot</h2>
+                <p>Creating intelligent chatbots with text-to-speech capability for personalized virtual assistant solutions.</p>
+                <!-- <a href="#">Learn more</a> -->
+            </div>
+        </div>
+    </div>
+</div>
+<!-- Projects Section -->
+<div id="projects">
+    <div class="container">
+        <h1 class="sub-title">My Projects</h1>
+        <div class="work-list">
+            <div class="work">
+                <img src="images/chatbot.png" alt="Chatbot Project">
+                <div class="layer">
+                    <h3>Chat Bot</h3>
+                    <p>Developed a Python-based chatbot for our university to serve as a virtual assistant for students, faculty, and staff.</p>
+                    <a href="https://github.com/teja2305/University-chatbot/tree/master" download target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+            <div class="work">
+                <img src="images/S2T.png" alt="Speech to Text Project">
+                <div class="layer">
+                    <h3>Speech to Text Transcription</h3>
+                    <p>Created a web application using Flask for speech-to-text conversion, supporting various input sources.</p>
+                    <a href="https://github.com/teja2305/Speech-to-Text-Transcription" download target="_blank"><i class="fas fa-external-link-alt"></i></a>
+                </div>
+            </div>
+        </div>
+        <!-- <a href="#" class="btn">See more</a> -->
+    </div>
+</div><br><br><br>
+<!-- Contact Section -->
+<div id="contact">
+    <div class="container">
+         <div class="row">
+            <div class="contact-left">
+                <h1 class="sub-title">Contact Me</h1>
+                <p><i class="fas fa-envelope"></i>ramacharlasaiteja@gmail.com</p>
+                <p><i class="fas fa-phone-square-alt"></i>+91 9494605253</p>
+                <div class="social-icons">
+                    <a href="https://www.linkedin.com/in/sai-teja-ramacharla-868655245/"><i class="fab fa-linkedin"></i></a>
+                    <a href="https://github.com/teja2305"><i class="fa-brands fa-github"></i></a>
+                    <a href="https://www.instagram.com/saiteja2305/"><i class="fab fa-instagram"></i></a>
+                    <a href="https://twitter.com/saiteja_2305"><i class="fab fa-twitter-square"></i></a>
+                </div>
+                <a href="https://drive.google.com/file/d/1OVyG3lGVbwboW67CT7BvHLIUFkQDi3IK/view?usp=sharing" download class="btn btn2" download target="_blank">View Resume</a>
+            </div>
+            <div class="contact-right">
+                <form name="submit-to-google-sheet">
+                    <input type="text" name="Name" placeholder="Your Name" required>
+                    <input type="email" name="Email" placeholder="Your Email" required> 
+                    <textarea name="Message" rows="10" placeholder="Your Message"></textarea>
+                    <button type="submit" class="btn btn2">Submit</button>
+                </form>
+                <span id="msg"></span>
+            </div>
+         </div>
+    </div>
+    <div class="copyright">
+        © 2024 Sai Teja - All rights reserved
+    </div>
+</div>
+<script>
+
+    var tablinks = document.getElementsByClassName("tab-links");
+    var tabcontents = document.getElementsByClassName("tab-contents");
+    function opentab(tabname){
+        for(tablink of tablinks){
+             tablink.classList.remove("active-link");
+        }
+        for(tabcontent of tabcontents){
+            tabcontent.classList.remove("active-tab");
+        }
+        event.currentTarget.classList.add("active-link");
+        document.getElementById(tabname).classList.add("active-tab");
+    }
+
+</script>
+
+<script>
+    var sidemeu=document.getElementById("sidemenu");
+
+    function openmenu(){
+        sidemeu.style.right="0";
+    }
+
+    function closemenu(){
+        sidemeu.style.right="-200px";
+    }
+</script>
+<script>
+    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZkT0yt1MxZR3331OruKku8e-eSQTiJW7QgiZbhLAnC40ozjRej5So2MU5zv1udpCJ/exec'
+    const form = document.forms['submit-to-google-sheet']
+    const msg = document.getElementById("msg")
+  
+    form.addEventListener('submit', e => {
+      e.preventDefault()
+      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
+        .then(response => {
+            msg.innerHTML= "Message sent successfully"
+            setTimeout(function(){
+                msg.innerHTML=""
+            },5000)
+            form.reset()
+        })
+        .catch(error => console.error('Error!', error.message))
+    })
+  </script>  
+</body>
+</html>
