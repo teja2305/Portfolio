@@ -1,199 +1,350 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Portfolio</title>
-    <link rel="stylesheet" href="style.css">
-    <script src="https://kit.fontawesome.com/981d186320.js" crossorigin="anonymous"></script>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Sai Teja Ramacharla — Full Stack &amp; AI Developer</title>
+<meta name="description" content="Sai Teja Ramacharla — Full Stack Developer building AI-powered applications and enterprise platforms with Java, Spring Boot, React and cloud technologies.">
+
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@500;600;700&family=Inter:wght@400;500;600&family=JetBrains+Mono:wght@400;500;600;700&display=swap" rel="stylesheet">
+<link rel="stylesheet" href="style.css">
 </head>
 <body>
-<div id="header">
-    <div class="container">
-        <nav>
-            <img src="images/logo3.png" alt="Logo" class="logo">
-            <ul id="sidemenu">
-                <li><a href="#header">Home</a></li>
-                <li><a href="#about">About</a></li>
-                <li><a href="#services">Services</a></li>
-                <li><a href="#projects">Projects</a></li>
-                <li><a href="#contact">Contact</a></li>
-                <i class="fa-solid fa-xmark" onclick="closemenu()"></i>
-            </ul>
-            
-            <i class="fa-solid fa-bars" onclick="openmenu()"></i>
-        </nav>
-        <div class="header-text">
-            <a href="https://drive.google.com/file/d/1OVyG3lGVbwboW67CT7BvHLIUFkQDi3IK/view?usp=sharing" download class="btn btn2" download target="_blank">View Resume</a>
-            <p>Software Developer</p>
-            <h1>Hi, I'm <span>Sai Teja</span><br>From India</h1> 
-            
+
+<!-- ================= TOP BAR ================= -->
+<header class="topbar">
+  <div class="topbar-inner">
+    <div class="brand"><span class="dot"></span> sai-teja.dev</div>
+    <nav class="tabs" id="tabs">
+      <a class="tab active" href="#home">home.tsx</a>
+      <a class="tab" href="#about">about.md</a>
+      <a class="tab" href="#experience">experience.log</a>
+      <a class="tab" href="#projects">projects/</a>
+      <a class="tab" href="#skills">skills.json</a>
+      <a class="tab" href="#contact">contact.sh</a>
+    </nav>
+    <a class="resume-btn" href="Resume.pdf" target="_blank" rel="noopener">View Résumé ↗</a>
+    <button class="menu-toggle" id="menuToggle" aria-label="Open menu" aria-expanded="false">☰</button>
+  </div>
+  <nav class="mobile-menu" id="mobileMenu">
+    <a class="mobile-link" href="#home">home.tsx</a>
+    <a class="mobile-link" href="#about">about.md</a>
+    <a class="mobile-link" href="#experience">experience.log</a>
+    <a class="mobile-link" href="#projects">projects/</a>
+    <a class="mobile-link" href="#skills">skills.json</a>
+    <a class="mobile-link" href="#credentials">credentials/</a>
+    <a class="mobile-link" href="#contact">contact.sh</a>
+  </nav>
+</header>
+
+<!-- ================= HERO ================= -->
+<section class="hero container" id="home">
+  <div>
+    <div class="terminal">
+      <div class="terminal-bar">
+        <span class="light r"></span><span class="light y"></span><span class="light g"></span>
+        <span class="path">sai@portfolio — zsh — 80×24</span>
+      </div>
+      <div class="terminal-body">
+        <div class="line"><span class="prompt">sai</span><span class="cmd">@portfolio </span><span class="prompt-path">~</span><span class="cmd"> $ </span><span id="typeTarget" class="type-target"></span><span class="cursor" id="cursorBlink"></span></div>
+        <div class="hero-output" id="heroOutput">
+          <div class="hero-name">Sai Teja Ramacharla</div>
+          <div class="hero-role">Full Stack Developer · Open to New Opportunities</div>
+          <p class="hero-desc">I build AI-powered applications and enterprise platforms with Java, Spring Boot and React. I spent the past year at SwissRe shipping voice-driven AI assistants and 3D avatar interfaces for insurance workflows, and I'm now deepening my AI expertise through an Executive PG Certificate in Generative AI &amp; Agentic AI at IIT Kharagpur — while looking for my next full-stack / applied-AI role.</p>
+          <div class="hero-tags">
+            <span class="hero-tag">Java · Spring Boot</span>
+            <span class="hero-tag">React · TypeScript</span>
+            <span class="hero-tag">Agentic AI</span>
+            <span class="hero-tag">Azure Devops</span>
+            <span class="hero-tag accent">IIT Kharagpur · Gen AI and Agentic AI</span>
+          </div>
+          <div class="hero-cta">
+            <a class="btn primary" href="#projects">See the work</a>
+            <a class="btn" href="#contact">Get in touch</a>
+          </div>
         </div>
+      </div>
     </div>
-</div>
-<!-- About Section --> 
-<div id="about">
-    <div class="container">
-        <div class="row">
-            <div class="about-col-1">
-                <img src="images/user1.png" alt="Profile Picture">
-            </div>
-            <div class="about-col-2">
-                <h1 class="sub-title">About Me</h1>
-                <p>Hi there! I'm Sai Teja, a Computer Science and Engineering student at SCSVMV University, Kanchipuram. I love exploring how technology can make life better. When I tackle a project, I dive in headfirst, always looking for ways to make things work better and easier. I'm all about teamwork and learning from others. Let's team up and create something awesome together!</p>
-                <div class="tab-titles">
-                     <p class="tab-links active-link" onclick="opentab('skills')">Skills</p>
-                     <p class="tab-links" onclick="opentab('education')">Education</p>
-                 </div>
-                 <div class="tab-contents active-tab" id="skills">
-                    <ul>
-                        <li><span>Programming </span>(Java, Python)</li>
-                        <li><span>Data Science </span>(Pandas, Seaborn, Numpy)</li>
-                        <li><span>Database </span>(SQLite)</li>
-                        <li><span>Frontend </span>(HTML,CSS,Javascript)</li>
-                        <li><span>Machine Learning </span>(Numpy, TensorFlow, Scikit-Learn, PyTorch)</li>
-                        <li><span>Open CV </span>(Matplotlib, Turtle, Pytesseract)</li>
-                        <li><span>Soft Skills </span>(Time Management, Communication, Adaptability, Problem Solving)</li>
-                    </ul>
-                 </div>
-                 <div class="tab-contents" id="education">
-                    <ul>
-                        <li><span>2020 - 2024</span><br>BE-CSE from SCSVMV University, Kanchipuram, Tamil Nadu</li>
-                        <li><span>2018 - 2020</span><br>Intermediate from St.Patricks Junior College</li>
-                    </ul>
-                 </div>
-            </div>
+  </div>
+
+  <div class="hero-side">
+    <div class="avatar-frame">
+      <img src="images/pic.png" alt="Sai Teja Ramacharla" id="profileImg">
+      <div class="avatar-caption">
+        <span>Hyderabad, IN</span>
+        <span class="ok">● available</span>
+      </div>
+    </div>
+    <div class="status-card">
+      <div class="row"><span>status</span><span class="ok">open_to_work: true</span></div>
+      <div class="row"><span>last_role</span><span>Associate App Engineer</span></div>
+      <div class="row"><span>company</span><span>SwissRe (Apr'25–Apr'26)</span></div>
+      <div class="row"><span>studying</span><span>Gen AI &amp; Agentic AI</span></div>
+      <div class="row"><span>institute</span><span>IIT Kharagpur</span></div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= ABOUT ================= -->
+<section class="section container reveal" id="about">
+  <div class="eyebrow">about.md</div>
+  <h2 class="section-title">A developer who likes teaching machines to talk back.</h2>
+  <p class="section-sub">CS graduate turned full-stack engineer, now leveling up in Generative &amp; Agentic AI while exploring my next role.</p>
+
+  <div class="about-grid">
+    <div class="about-copy">
+      <p>I'm a <strong>Full Stack Developer</strong> based in Hyderabad, building AI-powered applications and enterprise platforms with <strong>Java, Spring Boot, React and cloud technologies</strong>. Most recently, I spent a year at SwissRe where my work centered on generative and agentic AI — integrating AI assistants, real-time voice interaction, and 3D avatar interfaces into production insurance software.</p>
+      <p>I'm currently pursuing an <strong>Executive PG Certificate in Generative AI &amp; Agentic AI at IIT Kharagpur</strong>, sharpening the skills behind multi-agent systems and LLM-powered products — and actively looking for a full-stack or applied-AI role where I can put that to work.</p>
+      <p>I also care about code that's built to last — at SwissRe I personally drove maintainability scores from <strong>80 to 90</strong> and mutation test coverage from <strong>78% to 90%</strong> on a production codebase. Earlier, I graduated with a <strong>9.23 CGPA</strong> in Computer Science, picked up an <strong>AWS Cloud Practitioner</strong> certification, and completed a software engineering simulation with <strong>JP Morgan Chase &amp; Co.</strong></p>
+
+      <div class="stat-row">
+        <div class="stat"><div class="num">1 yr</div><div class="label">PROFESSIONAL EXP.</div></div>
+        <div class="stat"><div class="num">90%</div><div class="label">MUTATION COVERAGE</div></div>
+        <div class="stat"><div class="num">9.23</div><div class="label">CGPA / 10</div></div>
+      </div>
+    </div>
+
+    <div class="code-card">
+      <div class="terminal-bar">
+        <span class="light r"></span><span class="light y"></span><span class="light g"></span>
+        <span class="path">profile.json</span>
+      </div>
+      <pre><span class="punc">{</span>
+  <span class="key">"name"</span><span class="punc">:</span> <span class="str">"Sai Teja Ramacharla"</span><span class="punc">,</span>
+  <span class="key">"title"</span><span class="punc">:</span> <span class="str">"Full Stack Developer"</span><span class="punc">,</span>
+  <span class="key">"location"</span><span class="punc">:</span> <span class="str">"Hyderabad, India"</span><span class="punc">,</span>
+  <span class="key">"focus"</span><span class="punc">:</span> <span class="punc">[</span><span class="str">"Generative AI"</span><span class="punc">,</span> <span class="str">"Agentic AI"</span><span class="punc">,</span>
+            <span class="str">"Full Stack Systems"</span><span class="punc">],</span>
+  <span class="key">"status"</span><span class="punc">:</span> <span class="str">"open_to_work"</span><span class="punc">,</span>
+  <span class="key">"last_role"</span><span class="punc">:</span> <span class="str">"SwissRe — Associate App Engineer"</span><span class="punc">,</span>
+  <span class="key">"studying"</span><span class="punc">:</span> <span class="str">"Exec. PGC, Gen AI &amp; Agentic AI"</span><span class="punc">,</span>
+  <span class="key">"institute"</span><span class="punc">:</span> <span class="str">"IIT Kharagpur"</span><span class="punc">,</span>
+  <span class="key">"education"</span><span class="punc">:</span> <span class="str">"B.E. Computer Science, 2024"</span><span class="punc">,</span>
+  <span class="key">"certified"</span><span class="punc">:</span> <span class="str">"AWS Cloud Practitioner"</span><span class="punc">,</span>
+  <span class="com">// always learning something new</span>
+  <span class="key">"currently_exploring"</span><span class="punc">:</span> <span class="str">"multi-agent workflows"</span>
+<span class="punc">}</span></pre>
+    </div>
+  </div>
+</section>
+
+<!-- ================= EXPERIENCE ================= -->
+<section class="section container reveal" id="experience">
+  <div class="eyebrow">experience.log</div>
+  <h2 class="section-title">Where I've shipped code</h2>
+  <p class="section-sub">A running log of the teams and problems I've worked on.</p>
+
+  <div class="log-list">
+
+    <div class="log-entry">
+      <div class="log-meta">April 2025 — April 2026 · Hybrid, Hyderabad</div>
+      <h3 class="log-title">Associate Application Engineer</h3>
+      <div class="log-org">SwissRe</div>
+      <ul class="log-points">
+        <li>Built <strong>SmartInsuranceAssistant</strong>, a branded AI assistant frontend supporting both text and real-time voice conversations, using React.js, TypeScript and Tailwind CSS.</li>
+        <li>Integrated a Chainlit backend with a custom React UI and 3D animated avatars (Ready Player Me + Three.js), syncing avatar expressions to live AI responses.</li>
+        <li>Contributed to Datahub, an enterprise integration platform bridging consumers and external data vendors across structured and unstructured data (PDFs, HTML reports).</li>
+        <li>Resolved 100+ SonarQube maintainability/security issues — lifted code quality score from 80 to 90 and PIT mutation coverage from 78% to 90% via targeted unit tests.</li>
+        <li>Worked across Java, Spring Boot, SQL Server and Docker, with Swagger for API documentation, inside an Azure DevOps / Agile workflow.</li>
+      </ul>
+      <div class="stack-row">
+        <span class="stack-chip">Java</span><span class="stack-chip">Spring Boot</span><span class="stack-chip">React.js</span>
+        <span class="stack-chip">TypeScript</span><span class="stack-chip">Three.js</span><span class="stack-chip">SQL Server</span>
+        <span class="stack-chip">Docker</span><span class="stack-chip">Azure DevOps</span>
+      </div>
+    </div>
+
+    <div class="log-entry">
+      <div class="log-meta">Oct 2023 — Nov 2023 · Remote</div>
+      <h3 class="log-title">Full Stack Developer</h3>
+      <div class="log-org">BharatIntern</div>
+      <ul class="log-points">
+        <li>Developed and deployed scalable solutions using Java, Spring Boot and REST APIs.</li>
+        <li>Designed a Content Management Tool built to handle large datasets efficiently.</li>
+        <li>Built a Project Management Tool with seamless front-end/back-end integration.</li>
+        <li>Applied CI/CD pipelines to streamline deployment and testing.</li>
+      </ul>
+      <div class="stack-row">
+        <span class="stack-chip">Java 8</span><span class="stack-chip">Spring Boot</span><span class="stack-chip">MySQL</span><span class="stack-chip">JavaScript</span>
+      </div>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= PROJECTS ================= -->
+<section class="section container reveal" id="projects">
+  <div class="eyebrow">projects/</div>
+  <h2 class="section-title">Things I've built</h2>
+  <p class="section-sub">A few projects that span backend systems, applied ML and voice interfaces.</p>
+
+  <div class="project-grid">
+
+    <div class="project-card">
+      <div class="project-icon">01</div>
+      <h3>Bank Management System</h3>
+      <div class="project-meta">Nov 2024 – Dec 2024</div>
+      <p>A secure, scalable account management system with user authentication, transaction tracking and statement generation. Optimized SQL queries to cut response time by 30%.</p>
+      <div class="project-stack">
+        <span>Java</span><span>Spring Boot</span><span>Spring Data JPA</span><span>Thymeleaf</span><span>MySQL</span>
+      </div>
+      <a class="project-link" href="https://github.com/teja2305" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">02</div>
+      <h3>University Chatbot</h3>
+      <div class="project-meta">Feb 2023 – May 2023</div>
+      <p>A Python virtual assistant for university stakeholders with text-based interaction and text-to-speech voice responses, built on classic NLP.</p>
+      <div class="project-stack">
+        <span>Python</span><span>Flask</span><span>Keras</span><span>NLTK</span><span>Speech Recognition</span>
+      </div>
+      <a class="project-link" href="https://github.com/teja2305/University-chatbot/tree/master" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+    <div class="project-card">
+      <div class="project-icon">03</div>
+      <h3>Speech to Text WebApp</h3>
+      <div class="project-meta">Aug 2023 – Dec 2023</div>
+      <p>A Flask web app transcribing speech from microphone, audio or video input, with transcript saving and cleanup for a smooth end-to-end flow.</p>
+      <div class="project-stack">
+        <span>Python</span><span>Flask</span><span>MoviePy</span><span>PyDub</span><span>Google Speech API</span>
+      </div>
+      <a class="project-link" href="https://github.com/teja2305/Speech-to-Text-Transcription" target="_blank" rel="noopener">View on GitHub ↗</a>
+    </div>
+
+  </div>
+</section>
+
+<!-- ================= SKILLS ================= -->
+<section class="section container reveal" id="skills">
+  <div class="eyebrow">skills.json</div>
+  <h2 class="section-title">Tools of the trade</h2>
+  <p class="section-sub">Everything I reach for day to day, grouped the way I actually use it.</p>
+
+  <div class="skills-wrap">
+    <div class="terminal-bar">
+      <span class="light r"></span><span class="light y"></span><span class="light g"></span>
+      <span class="path">skills.json — read only</span>
+    </div>
+    <div class="skill-groups">
+      <div class="skill-group">
+        <h4>LANGUAGES</h4>
+        <div class="skill-chips"><span>Java</span><span>Python</span><span>C++</span><span>SQL</span><span>JavaScript</span><span>TypeScript</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>FRAMEWORKS &amp; LIBRARIES</h4>
+        <div class="skill-chips"><span>Spring Boot</span><span>Hibernate</span><span>React.js</span><span>Angular</span><span>REST APIs</span><span>Microservices</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>AI &amp; DATA</h4>
+        <div class="skill-chips"><span>Generative AI</span><span>Agentic AI</span><span>TensorFlow</span><span>NumPy</span><span>Pandas</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>CLOUD &amp; DEVOPS</h4>
+        <div class="skill-chips"><span>AWS</span><span>GCP</span><span>Docker</span><span>Azure DevOps</span><span>CI/CD</span><span>Git</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>DATABASES</h4>
+        <div class="skill-chips"><span>MySQL</span><span>SQL Server</span></div>
+      </div>
+      <div class="skill-group">
+        <h4>TOOLING</h4>
+        <div class="skill-chips"><span>VS Code</span><span>IntelliJ IDEA</span><span>Swagger</span><span>Bruno</span><span>Eclipse</span></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- ================= CREDENTIALS ================= -->
+<section class="section container reveal" id="credentials">
+  <div class="eyebrow">credentials/</div>
+  <h2 class="section-title">Certifications &amp; education</h2>
+  <p class="section-sub">Formal training and credentials backing the hands-on work.</p>
+
+  <div class="cred-grid">
+    <div>
+      <div class="cred-card featured">
+        <div class="cred-badge accent">IIT</div>
+        <div>
+          <div class="cred-head"><h4>Executive PG Certificate — Generative AI &amp; Agentic AI</h4><span class="progress-badge">IN PROGRESS</span></div>
+          <div class="cred-org">IIT Kharagpur</div>
+          <div class="cred-date">June 2026 – Present</div>
         </div>
-    </div>
-</div>
-<!-- Services Section -->
-<div id="services">
-    <div class="container">
-        <h1 class="sub-title">My Services</h1>
-        <div class="services-list">
-            <div>
-                <i class="fas fa-code"></i>
-                <h2>Web Development</h2>
-                <p>Crafting dynamic and responsive web solutions, specializing in frontend and backend development.</p>
-                <!-- <a href="#">Learn more</a> -->
-            </div>
-            <div>
-                <i class="fas fa-chart-pie"></i>
-                <h2>Data Science</h2>
-                <p>Offering data analysis, visualization, and machine learning model services using modern tools.</p>
-                <!-- <a href="#">Learn more</a> -->
-            </div>
-            <div>
-                <i class="fas fa-robot"></i>
-                <h2>Chatbot</h2>
-                <p>Creating intelligent chatbots with text-to-speech capability for personalized virtual assistant solutions.</p>
-                <!-- <a href="#">Learn more</a> -->
-            </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-badge">AWS</div>
+        <div>
+          <h4>AWS Certified Cloud Practitioner</h4>
+          <div class="cred-org">Amazon Web Services</div>
+          <div class="cred-date">Feb 2025</div>
         </div>
-    </div>
-</div>
-<!-- Projects Section -->
-<div id="projects">
-    <div class="container">
-        <h1 class="sub-title">My Projects</h1>
-        <div class="work-list">
-            <div class="work">
-                <img src="images/chatbot.png" alt="Chatbot Project">
-                <div class="layer">
-                    <h3>Chat Bot</h3>
-                    <p>Developed a Python-based chatbot for our university to serve as a virtual assistant for students, faculty, and staff.</p>
-                    <a href="https://github.com/teja2305/University-chatbot/tree/master" download target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
-            <div class="work">
-                <img src="images/S2T.png" alt="Speech to Text Project">
-                <div class="layer">
-                    <h3>Speech to Text Transcription</h3>
-                    <p>Created a web application using Flask for speech-to-text conversion, supporting various input sources.</p>
-                    <a href="https://github.com/teja2305/Speech-to-Text-Transcription" download target="_blank"><i class="fas fa-external-link-alt"></i></a>
-                </div>
-            </div>
+      </div>
+      <div class="cred-card">
+        <div class="cred-badge">JFS</div>
+        <div>
+          <h4>Java Full Stack Development</h4>
+          <div class="cred-org">JSpiders</div>
+          <div class="cred-date">Jan 2024 – Apr 2024</div>
         </div>
-        <!-- <a href="#" class="btn">See more</a> -->
+      </div>
+      <div class="cred-card">
+        <div class="cred-badge">JPM</div>
+        <div>
+          <h4>Software Engineering Job Simulation</h4>
+          <div class="cred-org">JP Morgan Chase &amp; Co.</div>
+          <div class="cred-date">Jan 2025</div>
+        </div>
+      </div>
     </div>
-</div><br><br><br>
-<!-- Contact Section -->
-<div id="contact">
-    <div class="container">
-         <div class="row">
-            <div class="contact-left">
-                <h1 class="sub-title">Contact Me</h1>
-                <p><i class="fas fa-envelope"></i>ramacharlasaiteja@gmail.com</p>
-                <p><i class="fas fa-phone-square-alt"></i>+91 9494605253</p>
-                <div class="social-icons">
-                    <a href="https://www.linkedin.com/in/sai-teja-ramacharla-868655245/" download target="_blank"><i class="fab fa-linkedin"></i></a>
-                    <a href="https://github.com/teja2305" download target="_blank"><i class="fa-brands fa-github"></i></a>
-                    <a href="https://www.instagram.com/saiteja2305/" download target="_blank"><i class="fab fa-instagram"></i></a>
-                    <a href="https://twitter.com/saiteja_2305" download target="_blank"><i class="fab fa-twitter-square"></i></a>
-                </div>
-                <a href="https://drive.google.com/file/d/1OVyG3lGVbwboW67CT7BvHLIUFkQDi3IK/view?usp=sharing" download class="btn btn2" download target="_blank">View Resume</a>
-            </div>
-            <div class="contact-right">
-                <form name="submit-to-google-sheet">
-                    <input type="text" name="Name" placeholder="Your Name" required>
-                    <input type="email" name="Email" placeholder="Your Email" required> 
-                    <textarea name="Message" rows="10" placeholder="Your Message"></textarea>
-                    <button type="submit" class="btn btn2">Submit</button>
-                </form>
-                <span id="msg"></span>
-            </div>
-         </div>
+
+    <div>
+    <div class="edu-card">
+      <div class="cred-date">July 2020 – May 2024</div>
+      <h4>B.E. Computer Science</h4>
+      <div class="cred-org">SCSVMV University, Kanchipuram, Tamil Nadu</div>
+      <div class="gpa-bar">
+        <span>CGPA</span>
+        <div class="gpa-track"><div class="gpa-fill" style="width: 92.3%"></div></div>
+        <span>9.23 / 10</span>
+      </div>
     </div>
-    <div class="copyright">
-        © 2024 Sai Teja - All rights reserved
+
+    <div class="edu-card">
+      <div class="cred-date">March 2018 – March 2020</div>
+      <h4>Class XII (Intermediate), MPC</h4>
+      <div class="cred-org">St. Patrick's Junior College, Hyderabad, Telangana, India </div>
+      <div class="gpa-bar">
+        <span>Marks</span>
+        <div class="gpa-track"><div class="gpa-fill" style="width: 88.9%"></div></div>
+        <span>889 / 1000</span>
+      </div>
     </div>
-</div>
-<script>
+    </div>
+  </div>
+</section>
 
-    var tablinks = document.getElementsByClassName("tab-links");
-    var tabcontents = document.getElementsByClassName("tab-contents");
-    function opentab(tabname){
-        for(tablink of tablinks){
-             tablink.classList.remove("active-link");
-        }
-        for(tabcontent of tabcontents){
-            tabcontent.classList.remove("active-tab");
-        }
-        event.currentTarget.classList.add("active-link");
-        document.getElementById(tabname).classList.add("active-tab");
-    }
+<!-- ================= CONTACT ================= -->
+<section class="section container reveal" id="contact" style="border-bottom:none;">
+  <div class="contact-wrap">
+    <div class="eyebrow" style="justify-content:center;">contact.sh</div>
+    <h2>Let's build something together</h2>
+    <p>Open to full-stack and applied-AI roles. The fastest way to reach me is email — I usually reply within a day.</p>
+    <div class="contact-links">
+      <a class="contact-link" href="mailto:ramacharlasaiteja@gmail.com">✉ Email</a>
+      <a class="contact-link" href="tel:+919494605253">☎ +91 94946 05253</a>
+      <a class="contact-link" href="https://www.linkedin.com/in/sai-teja-ramacharla/" target="_blank" rel="noopener">in LinkedIn</a>
+      <a class="contact-link" href="https://github.com/teja2305" target="_blank" rel="noopener">⌥ GitHub</a>
+    </div>
+  </div>
+</section>
 
-</script>
+<footer>
+  © 2026 Sai Teja Ramacharla — built with HTML, CSS &amp; a healthy respect for the command line.
+</footer>
 
-<script>
-    var sidemeu=document.getElementById("sidemenu");
-
-    function openmenu(){
-        sidemeu.style.right="0";
-    }
-
-    function closemenu(){
-        sidemeu.style.right="-200px";
-    }
-</script>
-<script>
-    const scriptURL = 'https://script.google.com/macros/s/AKfycbzZkT0yt1MxZR3331OruKku8e-eSQTiJW7QgiZbhLAnC40ozjRej5So2MU5zv1udpCJ/exec'
-    const form = document.forms['submit-to-google-sheet']
-    const msg = document.getElementById("msg")
-  
-    form.addEventListener('submit', e => {
-      e.preventDefault()
-      fetch(scriptURL, { method: 'POST', body: new FormData(form)})
-        .then(response => {
-            msg.innerHTML= "Message sent successfully"
-            setTimeout(function(){
-                msg.innerHTML=""
-            },5000)
-            form.reset()
-        })
-        .catch(error => console.error('Error!', error.message))
-    })
-  </script>  
+<script src="script.js"></script>
 </body>
 </html>
